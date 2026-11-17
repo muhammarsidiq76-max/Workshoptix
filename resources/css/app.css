@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@source '../../app/Models/*.php';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --color-navy: #0f2a6b;
+    --color-navy-dark: #0a1d4d;
+    --color-tix: #f97316;
+}
+
+@media print {
+    .no-print { display: none !important; }
+    body { background: #fff !important; }
+}
+
+@media screen {
+    body.gelap {
+        color-scheme: dark;
+        color: #e6e9f5;
+        background:
+            radial-gradient(900px 500px at -10% 0%, rgba(37, 99, 235, .18), transparent),
+            radial-gradient(800px 400px at 90% -10%, rgba(249, 115, 22, .12), transparent),
+            #0b1020;
+        background-attachment: fixed;
+    }
+
+    /* permukaan */
+    body.gelap .bg-white { background-color: #121a30; }
+    body.gelap .bg-slate-50 { background-color: #0b1020; }
+    body.gelap .bg-slate-200 { background-color: #1c2745; }
+    body.gelap .bg-orange-50 { background-color: rgba(249, 115, 22, .08); }
+    body.gelap .hover\:bg-white:hover { background-color: #1a2547; }
+
+    /* garis */
+    body.gelap .border-slate-100,
+    body.gelap .border-slate-200,
+    body.gelap .border-slate-300 { border-color: #243050; }
+    body.gelap .divide-slate-100 > * { border-color: #243050; }
+
+    /* teks */
+    body.gelap .text-slate-800,
+    body.gelap .text-slate-700 { color: #e6e9f5; }
+    body.gelap .text-slate-600 { color: #c3cae0; }
+    body.gelap .text-slate-500 { color: #9aa5c4; }
+    body.gelap .text-slate-400 { color: #7b86a8; }
+    body.gelap .text-navy { color: #8fb0ff; }
+
+    /* input form */
+    body.gelap input,
+    body.gelap select,
+    body.gelap textarea {
+        background-color: #0e1528;
+        color: #e6e9f5;
+        border-color: #2a3858;
+    }
+
+    /* lencana status */
+    body.gelap .bg-emerald-100 { background-color: rgba(16, 185, 129, .15); }
+    body.gelap .text-emerald-700 { color: #6ee7b7; }
+    body.gelap .bg-amber-100 { background-color: rgba(245, 158, 11, .15); }
+    body.gelap .text-amber-700 { color: #fcd34d; }
+    body.gelap .bg-rose-100 { background-color: rgba(244, 63, 94, .15); }
+    body.gelap .text-rose-700,
+    body.gelap .text-rose-600 { color: #fda4af; }
+    body.gelap .bg-orange-100 { background-color: rgba(249, 115, 22, .16); }
+    body.gelap .text-orange-700 { color: #fdba74; }
+
+    /* pesan flash */
+    body.gelap .bg-emerald-50 { background-color: rgba(16, 185, 129, .10); }
+    body.gelap .bg-sky-50 { background-color: rgba(14, 165, 233, .10); }
+    body.gelap .bg-rose-50 { background-color: rgba(244, 63, 94, .10); }
+    body.gelap .text-emerald-800 { color: #a7f3d0; }
+    body.gelap .text-sky-800 { color: #bae6fd; }
+    body.gelap .text-rose-800 { color: #fecdd3; }
+    body.gelap .border-emerald-200 { border-color: rgba(16, 185, 129, .35); }
+    body.gelap .border-sky-200 { border-color: rgba(14, 165, 233, .35); }
+    body.gelap .border-rose-200 { border-color: rgba(244, 63, 94, .35); }
+}
